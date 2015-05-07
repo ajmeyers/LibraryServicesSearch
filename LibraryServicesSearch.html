@@ -1,0 +1,82 @@
+<!--  
+
+Author: Andrew Meyers
+
+FGCU Library Services
+
+Description: HTML/JQuery code for Tabbed Search interface for FGCU Library Services
+
+Last updated: May 6th, 2015
+
+-->
+
+<html>
+<head>
+<title>FGCU Library Services</title>
+<link rel="stylesheet" type="text/css" href="css/TabStyles.css">
+
+<!-- JQuery Script -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+</script>
+<script>
+
+jQuery(document).ready(function() {
+    jQuery('.tabs .tab-links a').on('click', function(e)  {
+        
+        var currentAttrValue = jQuery(this).attr('href');
+ 
+        // Show/Hide Tabs
+        
+        jQuery('.tabs ' + currentAttrValue).fadeIn(400).siblings().hide();
+ 
+        // Switch Active Tab
+       
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+    });
+});
+
+</script>
+</head>
+<body>
+
+<h1>Library Catalog Search</h1>
+
+<!-- Creation of Tabs -->
+
+<div class="tabs">
+    <ul class="tab-links">
+        <!-- Tab 1 is default active tabe -->
+       
+        <li class="active"><a href="#tab1">Books</a></li>
+                    <li><a href="#tab2">Articles</a></li>
+                    <li><a href="#tab3">eJournals</a></li>
+                    <li><a href="#tab4">Databases</a></li>
+</ul>
+
+<!-- Tab Content -->
+
+<div class="tab-content">
+        <div id="tab1" class="tab active">
+            <p>Search for Books...</p>
+        </div>
+
+        <div id="tab2" class="tab">
+            <p>Search for Articles...</p>
+        </div>
+
+        <div id="tab3" class="tab">
+            <p>Search for eJournals...</p>
+        </div>
+
+        <div id="tab4" class="tab">
+            <p>Search for Databases...</p>
+        </div>
+    
+    </div>
+</div>
+
+</body>
+</html>

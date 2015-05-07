@@ -1,0 +1,81 @@
+/*
+
+Author: Andrew Meyers
+
+FGCU Library Services
+
+Description: CSS code for Tabbed Search interface for FGCU Library Services
+
+Last updated: May 6th, 2015
+
+*/
+
+
+body {
+    
+    background-color:lightblue;
+}
+
+/* ----- Tabs ----- */
+
+.tabs {
+
+    width:100%;
+    display:inline-block;
+
+}
+
+/* ----- Tab Links ----- */
+
+    .tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+    }
+ 
+    .tab-links li {
+        margin:0px 5px;
+        float:left;
+        list-style:none;
+    }
+ 
+        .tab-links a {
+            padding:9px 15px;
+            display:inline-block;
+            border-radius:3px 3px 0px 0px;
+            background:#7FB5DA;
+            font-size:16px;
+            font-weight:600;
+            color:#4c4c4c;
+            transition:all linear 0.15s;
+            outline-style:double;
+            outline-color:black;
+        }
+
+        .tab-links a:hover {
+            background:#a7cce5;
+            text-decoration:none;
+        }
+ 
+    li.active a, li.active a:hover {
+        background:#fff;
+        color:#4c4c4c;
+    }
+
+ /* ----- Content of Tabs ----- */
+    
+.tab-content {
+        
+        padding:15px;
+        border-radius:5px;
+        background:white;
+}
+ 
+ .tab {
+        display:none;
+ }
+
+.tab.active {
+        display:block;
+}
+
