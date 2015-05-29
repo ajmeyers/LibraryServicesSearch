@@ -13,16 +13,17 @@ Last updated: May 6th, 2015
 
 body {
     
-    background-color:lightblue;
+    background-color:white;
 }
 
 /* ----- Tabs ----- */
 
 .tabs {
 
-    width:100%;
-    display:inline-block;
-
+    background-color: white;
+    float: left;
+    margin-bottom: 5px;
+    width: auto;
 }
 
 /* ----- Tab Links ----- */
@@ -40,20 +41,21 @@ body {
     }
  
         .tab-links a {
-            padding:9px 15px;
+            padding:5px 15px;
             display:inline-block;
             border-radius:3px 3px 0px 0px;
-            background:#7FB5DA;
+            background:LightSkyBlue;
             font-size:16px;
             font-weight:600;
             color:#4c4c4c;
             transition:all linear 0.15s;
             outline-style:double;
             outline-color:black;
+
         }
 
         .tab-links a:hover {
-            background:#a7cce5;
+          background:#a7cce5;
             text-decoration:none;
         }
  
@@ -66,11 +68,17 @@ body {
     
 .tab-content {
         
-        padding:15px;
+        padding:10px;
         border-radius:5px;
+        border-width:1px;   
+        border-style: solid;
+        border-color: black;
         background:white;
 }
  
+ 
+
+
  .tab {
         display:none;
  }
@@ -79,3 +87,49 @@ body {
         display:block;
 }
 
+
+
+
+
+/* CSS for Search Button *GENERATED CODE* */
+
+.SearchButton {
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
+    background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+    background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+    background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+    background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+    background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9',GradientType=0);
+    background-color:#f9f9f9;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    cursor:pointer;
+    color:#666666;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+}
+.SearchButton:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
+    background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+    background:-webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+    background:-o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+    background:-ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+    background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
+    background-color:#e9e9e9;
+}
+.SearchButton:active {
+    position:relative;
+    top:1px;
+}
