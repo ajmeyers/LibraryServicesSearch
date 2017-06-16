@@ -1,4 +1,4 @@
-<!--  
+<!--
 
 Author: Andrew Meyers
 
@@ -6,90 +6,45 @@ FGCU Library Services
 
 Description: HTML/JQuery code for Tabbed Search interface for FGCU Library Services
 
-Last updated: May 6th, 2015
+Last updated: July 14th, 2015
 
 -->
 
+<!DOCTYPE html>
 <html>
 <head>
-<title>FGCU Library Services</title>
-<link rel="stylesheet" type="text/css" href="css/TabStyles.css">
-
-<!-- JQuery Script -->
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
-</script>
-<script>
-
-jQuery(document).ready(function() {
-    jQuery('.tabs .tab-links a').on('click', function(e)  {
-        
-        var currentAttrValue = jQuery(this).attr('href');
- 
-        // Show/Hide Tabs - Using Fading Effect
-        
-        jQuery('.tabs ' + currentAttrValue).fadeIn(400).siblings().hide();
- 
-        // Switch Active Tab
-       
-        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
- 
-        e.preventDefault();
-    });
-});
-
-</script>
+      <title>FGCU Library Services</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
-<h1>Library Catalog Search</h1>
-
-<!-- Creation of Tabs -->
-
-<div class="tabs">
-    <ul class="tab-links">
-        <!-- Tab 1 is default active tabe -->
-       
-        <li class="active"><a href="#tab1">Books</a></li>
-                    <li><a href="#tab2">Articles</a></li>
-                    <li><a href="#tab3">eJournals</a></li>
-                    <li><a href="#tab4">Databases</a></li>
-</ul>
-
-<!-- Tab Content -->
-
-<div class="tab-content">
-        <div id="tab1" class="tab active">
-            <p>Search for Books...</p>
-        </div>
-
-        <div id="tab2" class="tab">
-            <p>Search for Articles...</p>
-        </div>
-
-        <div id="tab3" class="tab">
-            <p>Search for eJournals...</p>
-        </div>
-
-        <div id="tab4" class="tab">
-            <p>Search for Databases...</p>
-        </div>
+ <!-- Creation of Tabs -->
+ 
+<div id="tabbed_box_1" class="tabbed_box">
     
+    <h4>FGCU Library Catalog Search</h4>
+    <div class="tabbed_area">
+
+     <!-- Switching Between Tabs -->
+
+     <script src="functions.js" type="text/javascript"></script>
+     <ul class="tabs">
+         <li><a href="javascript:tabSwitch('tab_1', 'content_1');" id="tab_1" class="active">Books</a></li>
+         <li><a href="javascript:tabSwitch('tab_2', 'content_2');" id="tab_2">Articles</a></li>
+         <li><a href="javascript:tabSwitch('tab_3', 'content_3');" id="tab_3">eJournals</a></li>
+         <li><a href="javascript:tabSwitch('tab_4', 'content_4');" id="tab_4">Databases</a></li>
+     </ul>
+
+
+        <div id="content_1" class="content">Search for Books... </div>
+        <div id="content_2" class="content">Search for Articles... </div>
+        <div id="content_3" class="content">Search for eJournals... </div>
+        <div id="content_4" class="content">Search for Databases... </div>
+     
     </div>
+ 
 </div>
 
-
-<!-- Develop Search Content Here -->
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<a href="#" class="SearchButton" onclick="alert('Searching...')">Search</a>
 
 </body>
 </html>
